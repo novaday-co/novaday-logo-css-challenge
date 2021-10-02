@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+#novaday {
+  position: relative;
+  width: 340px;
+  height: 510px;
+  transform: scale(0.8);
+}
+#novaday:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  transform: scaleX(1.5);
+}
+
+#novaday:after,
+h3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400%;
+  height: 100%;
+  z-index: 1;
+  /* background: linear-gradient(to right, transparent, #090909, #383738); */
+  /* animation: animate 2s linear forwards; */
+}
+#novaday span:nth-child(1),
+#novaday span:nth-child(2),
+#novaday span:nth-child(3) {
+  position: absolute;
+  width: 100px;
+  height: 80%;
+  background: #fff;
+  top: 0;
+}
+
+#novaday span:nth-child(4),
+#novaday span:nth-child(5) {
+  position: absolute;
+  width: 100px;
+  height: 40%;
+  background: #fff;
+  top: 0;
+}
+
+#novaday span:nth-child(4) {
+    height: 45%;
+}
+
+#novaday span:nth-child(1) {
+  background: #383738;
+  left: -55px;
+  z-index: 3;
+  transform: skewX(-15deg);
+}
+#novaday span:nth-child(2) {
+  background: linear-gradient(to bottom right, #090909, #383738);
+  left: 0;
+  z-index: 2;
+  transform-origin: top left;
+  transform: skewX(25deg);
+}
+
+#novaday span:nth-child(3) {
+  background: linear-gradient(to top, #090909, #383738);
+  right: 0;
+  left: 245px;
+  z-index: 1;
+  transform: skewX(-15deg);
+}
+
+#novaday span:nth-child(4) {
+  background: linear-gradient(to bottom, #090909, #383738);
+  right: 0;
+  left: 415px;
+  transform: skewX(45deg);
+}
+
+#novaday span:nth-child(5) {
+  background: #383738;
+  right: 0;
+  left: 396px;
+  top: 40%;
+  transform: skewX(-45deg);
+}
+
+#novaday span:nth-child(5):before,
+#novaday span:nth-child(5):after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid #383738;
+  top: 40%;
+}
+
+#novaday span:nth-child(5):before {
+  right: 0;
+}
+
+#novaday span:nth-child(5):before {
+  left: 0;
+}
+
+@keyframes animate {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -400%;
+  }
+}
